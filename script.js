@@ -1,0 +1,1 @@
+const listaPalavras = ['Copo', 'tampa', 'lata', 'mesa', 'cadeira', 'terra']
