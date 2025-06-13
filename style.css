@@ -1,144 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 30px;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-#forca {
-    width: 200px;
-    margin: 20px 0;
-}
-
-#palavra-exibida {
-    font-size: 3em;
-    margin: 20px 0;
-    letter-spacing: 10px;
-}
-
-#entrada-letra {
-    padding: 10px;
-    font-size: 1em;
-    width: 200px;
     text-align: center;
-    border-radius: 5px;
+    margin: 20px;
 }
 
-#inserir-letra{
-    align-items: center;
+#exibicao-palavra {
+    font-size: 3em;
+    margin-bottom: 30px;
 }
 
-#btn btn-outline-success{
-    height: 40px;
-}
-
-.botao-reiniciar {
-    display: none;
-  position: relative;
-  background: transparent;
-  padding: 0px;
-  margin: 30px;
-  border: none;
-  cursor: pointer;
-  outline-offset: 4px;
-  outline-color: deeppink;
-  transition: filter 250ms;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: hsl(226, 25%, 69%);
-  border-radius: 8px;
-  filter: blur(2px);
-  will-change: transform;
-  transform: translateY(2px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-.edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 8px;
-  background: linear-gradient(
-    to right,
-    hsl(248, 39%, 39%) 0%,
-    hsl(248, 39%, 49%) 8%,
-    hsl(248, 39%, 39%) 92%,
-    hsl(248, 39%, 29%) 100%
-  );
-}
-
-.front {
-  display: block;
-  position: relative;
-  border-radius: 8px;
-  background: hsl(248, 53%, 58%);
-  padding: 16px 32px;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 1rem;
-  transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-.botao-reiniciar:hover {
-  filter: brightness(110%);
-}
-
-.botao-reiniciar:hover .front {
-  transform: translateY(-6px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.botao-reiniciar:active .front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-.botao-reiniciar:hover .shadow {
-  transform: translateY(4px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.botao-reiniciar:active .shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-.botao-reiniciar:focus:not(:focus-visible) {
-  outline: none;
-}
-
-#letras-inseridas{
+#letras-chutadas {
     font-size: 2em;
     color: blue;
     font-weight: bold;
     margin-bottom: 20px;
+
 }
 
-#mensagem{
+#mensagem {
     display: none;
+}
+
+#botao-reiniciar {
+    display: none;
+    margin: auto;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#botao-reiniciar:hover {
+    background-color: #3c823e;
+}
+
+#btn-chutar {
+    /* Estilo básico */
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Efeitos visuais */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efeito ao passar o mouse */
+#btn-chutar:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao clicar */
+#btn-chutar:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de foco para acessibilidade */
+#btn-chutar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4);
+}
+
+#exibicao-palavra {
+    /* Tipografia */
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.5em; /* Espaçamento entre os underlines/letras */
+    text-align: center;
+    font-family: 'Courier New', monospace; /* Fonte estilo máquina de escrever */
+    color: #333;
+    
+    margin: 30px 0;
+    padding: 15px;
+    min-height: 1.2em;
+  
+    text-transform: uppercase;
+}
+
+#entrada-letra {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8em;
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid #4CAF50;
+    margin: 0 10px;
+    outline: none;
+    background: transparent;
+}
+
+#entrada-letra:focus {
+    border-bottom-color: #3498db;
 }
