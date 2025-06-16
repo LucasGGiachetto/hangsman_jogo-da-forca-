@@ -22,28 +22,44 @@ body {
 }
 
 #botao-reiniciar {
-    display: none;
-    margin: auto;
-    background-color: #4CAF50;
-    border: none;
+    /* Tamanho e espaçamento */
+    padding: 15px 30px;
+    margin: 30px auto;
+    width: 200px;
+    
+    /* Tipografia */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Cores e bordas */
+    background-color: #3498db;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 50px;
+    
+    /* Efeitos e transição */
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    
+    /* Layout */
+    display: none; /* Continua escondido até o fim do jogo */
 }
 
 #botao-reiniciar:hover {
-    background-color: #3c823e;
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #btn-chutar {
-    /* Estilo básico */
     padding: 12px 24px;
     margin: 10px;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -104,4 +120,39 @@ body {
 
 #entrada-letra:focus {
     border-bottom-color: #3498db;
+}
+
+.language-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.lang-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.lang-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#mensagem {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+    min-height: 1.5em;
 }

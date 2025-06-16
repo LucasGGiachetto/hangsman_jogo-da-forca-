@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Forca</title>
+    <title id="page-title">Jogo da Forca</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!--TOPO -->
-    <h1>Jogo da Forca</h1>
+    <h1 id="game-title">Jogo da Forca</h1>
     <img id="imagem" src="img/forca0.png" height="300px">
     <div id="exibicao-palavra"></div>
     <input type="text" id="entrada-letra" placeholder="" maxlength="1">
-    <button id="btn-chutar" onclick="chutarLetra()">Chutar</button>
+    <button id="btn-chutar" onclick="chutarLetra()" data-pt="Chutar" data-en="Guess">Chutar</button>
 
     <!-- BAIXO-->
-    <h2>Letras Chutadas</h2>
+    <h2 id="guessed-letters-title">Letras Chutadas</h2>
     <div id="letras-chutadas"></div>
-    <div id="mensagem">Você ganhou!</div><br>
+    <div id="mensagem"></div><br>
     <div style="text-align: center;">
-        <button id="botao-reiniciar" onclick="iniciarJogo()">Recomeçar</button>
+    <button id="botao-reiniciar" onclick="iniciarJogo()" data-pt="Recomeçar" data-en="Restart">Recomeçar</button>
     </div>
+    
+    <!-- Adicione este seletor de idioma -->
+    <div class="language-toggle" style="margin-top: 20px;">
+        <button class="lang-btn active" onclick="changeLanguage('pt')">Português (Brasil)</button>
+        <button class="lang-btn" onclick="changeLanguage('en')">English (USA)</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
-
 </html>
