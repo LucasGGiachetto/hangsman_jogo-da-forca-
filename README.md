@@ -2,7 +2,7 @@
 
 That is a simple Hangman Game.
 
-There's support to two languages: 
+There's support for two languages: 
 - Brazilian portuguese
 - American english
 
