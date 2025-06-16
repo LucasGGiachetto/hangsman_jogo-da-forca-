@@ -1,6 +1,6 @@
 # Hangman Game --- Jogo da Forca
 
-That is a simple Hangman Game made by me
+That is a simple Hangman Game.
 
 There's support to two languages: 
 - Brazilian portuguese
